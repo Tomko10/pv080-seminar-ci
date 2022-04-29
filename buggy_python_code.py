@@ -28,11 +28,13 @@ class RunBinSh(object):
     def __reduce__(self):
         return (subprocess.Popen, (('/bin/sh',),))
 
+
 def import_urlib_version(version):
     if str(version) == '3':
         import urllib3 as urllib
     else:
         import urllib
+
 
 @app.route('/')
 def index():
